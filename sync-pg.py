@@ -97,7 +97,7 @@ class PGDownloader:
             # 2. 提取更新信息
             update_info = self.extract_update_info(content)
             if update_info:
-                print("\n最新更新信息：")
+                print("\n## 最新更新信息：")
                 print(update_info)
                 print("\n")
                 with open('README.md', 'w', encoding='utf-8') as f:
