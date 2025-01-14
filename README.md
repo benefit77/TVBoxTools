@@ -1,4 +1,4 @@
-PG更新信息
+## PG更新信息
 ```text
 对不起，我是阿里不限速网盘资源全秒播
 讨论组:  https://t.me/pandagroovechat
