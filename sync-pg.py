@@ -19,9 +19,6 @@ class PGDownloader:
             url = f"{self.base_url}/README.md"
             response = requests.get(url, timeout=10)
             if response.status_code == 200:
-                with open('README.md', 'w', encoding='utf-8') as f:
-                    f.write(response.text)
-                print("README.md 已保存到当前目录")
                 return response.text
             else:
                 raise Exception(f"获取README.md失败，状态码：{response.status_code}")
@@ -103,6 +100,8 @@ class PGDownloader:
                 print("\n最新更新信息：")
                 print(update_info)
                 print("\n")
+                with open('README.md', 'w', encoding='utf-8') as f:
+                    f.write(update_info)
             else:
                 print("未找到更新信息")
             
