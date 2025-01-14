@@ -101,7 +101,7 @@ class PGDownloader:
                 print(update_info)
                 print("\n")
                 with open('README.md', 'w', encoding='utf-8') as f:
-                    f.write('PG更新信息\n')
+                    f.write('## PG更新信息\n')
                     f.write('```text\n')  # 添加开始标记
                     f.write(update_info)
                     f.write('\n```')      # 添加结束标记
