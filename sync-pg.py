@@ -19,6 +19,9 @@ class PGDownloader:
             url = f"{self.base_url}/README.md"
             response = requests.get(url, timeout=10)
             if response.status_code == 200:
+                with open('README.md', 'w', encoding='utf-8') as f:
+                    f.write(response.text)
+                print("README.md 已保存到当前目录")
                 return response.text
             else:
                 raise Exception(f"获取README.md失败，状态码：{response.status_code}")
@@ -139,6 +142,6 @@ if __name__ == '__main__':
     downloader = PGDownloader(
         username='fish2018',
         repo='PG',
-        local_target='p'  # 可选，如果需要解压到本地目录
+        local_target='pg'  # 可选，如果需要解压到本地目录
     )
     downloader.run()
